@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-image:linear-gradient(to bottom, rgba(164, 187, 202, 0.5), rgba(113, 129, 146, 0.5)), url('Images/pexels2.jpg') ;
+    background-attachment: fixed;
+     background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 3em;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: springgreen;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+
+    background: springgreen;
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background-color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.delete-btn, .completed-btn{
+   
+    border: none;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.delete-btn:hover, .completed-btn:hover{
+    opacity: 0.6;
+}
+
+.completed-btn{
+    background-color: springgreen;
+}
+
+.todo-item{
+    padding: 0.5rem 0.5rem;
+}
+
+.delete-btn{
+    background-color: red;
+}
+
+
+.container-err{
+    background-color: red;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    font-family: 'Poppins';
+    font-weight: bolder;
+   
+   
+}
+
+.container-err2{
+    animation: error 0.5s forwards;
+    
+}
+
+.err{
+    display: none;
+}
+
+
+.errorp{
+    visibility: visible;
+}
+
+
+
+
+
+.todo-error{
+    margin: 10px 4rem;
+}
+
+@keyframes error{
+    0%{ transform: rotateY(0);}
+    30%{transform: rotateY(30deg);}
+    60%{transform: rotateY(-30deg);}
+    100%{transform: rotateY(30deg),;}
+}
+
+
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.deleted{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.completed{
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.deleteAll{
+    background-color: red;
+    display: flex;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 50%;
+    left: 20%;
+}
+
+.deleteAll p{
+    margin-right: 10px;
+}
+
+
+header{
+    height: 20%;
+    background-color: springgreen;
+    opacity: 0.5;
+  
+ 
+}
+
+footer{
+   
+    width: 100%;
+    background-color: black;
+   padding: 20px 0;
+    opacity: 0.5;
+    color: white;
+    margin-top: auto;
+    text-align: center;
+}
